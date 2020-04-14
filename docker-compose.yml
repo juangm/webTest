@@ -24,7 +24,7 @@ services:
     env_file:
       - sickFitsApp/backend/env.dev
     ports:
-      - "7777:7777"
+      - "4444:4444"
     volumes:
       - ./sickFitsApp/backend:/app:cached
     tty: true
