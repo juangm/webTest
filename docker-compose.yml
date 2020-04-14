@@ -1,0 +1,31 @@
+---
+# :cached is a MacOS only flag to avoid a docker bug causing CPU spikes
+version: "2"
+services:
+  app-frontend:
+    container_name: "web_test_app_frontend_1"
+    build:
+      context: ./sickFitsApp/frontend/
+      dockerfile: Dockerfile
+    env_file:
+      - sickFitsApp/frontend/env.dev
+    ports:
+      - "7777:7777"
+    volumes:
+      - ./sickFitsApp/frontend:/app:cached
+    tty: true
+    stdin_open: true
+
+  app-backend:
+    container_name: "web_test_app_backend_1"
+    build:
+      context: ./sickFitsApp/backend/
+      dockerfile: Dockerfile
+    env_file:
+      - sickFitsApp/backend/env.dev
+    ports:
+      - "7777:7777"
+    volumes:
+      - ./sickFitsApp/backend:/app:cached
+    tty: true
+    stdin_open: true
