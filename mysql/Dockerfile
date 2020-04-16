@@ -13,6 +13,7 @@ COPY config.cnf /etc/mysql/conf.d/config.cnf
 
 # scripts
 ADD bin/boot.sh /boot.sh
+ADD bin/setup.sh /setup.sh
 
 ENTRYPOINT ["/boot.sh"]
 CMD ["mysqld"]
