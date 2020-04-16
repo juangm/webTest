@@ -6,6 +6,6 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY package.json yarn.lock ./
-RUN yarn install
+RUN yarn install --force
 
 CMD ["bin/boot.sh"]
