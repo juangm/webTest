@@ -2,36 +2,6 @@
 # :cached is a MacOS only flag to avoid a docker bug causing CPU spikes
 version: "2"
 services:
-  app-frontend:
-    container_name: "webTest_app_frontend_1"
-    build:
-      context: ./sickFitsApp/frontend/
-      dockerfile: Dockerfile
-    env_file:
-      - sickFitsApp/frontend/env.dev
-    network_mode: "host"
-    ports:
-      - "7777:7777"
-    volumes:
-      - ./sickFitsApp/frontend:/app:cached
-    tty: true
-    stdin_open: true
-
-  app-backend:
-    container_name: "webTest_app_backend_1"
-    build:
-      context: ./sickFitsApp/backend/
-      dockerfile: Dockerfile
-    env_file:
-      - sickFitsApp/backend/env.dev
-    network_mode: "host"
-    ports:
-      - "4444:4444"
-    volumes:
-      - ./sickFitsApp/backend:/app:cached
-    tty: true
-    stdin_open: true
-
   mysql:
     container_name: "webTest_mysql_1"
     build:
@@ -46,7 +16,7 @@ services:
     stdin_open: true
 
   todo-api:
-    container_name: "webTest_todoApi_1"
+    container_name: "webTest_todo-api_1"
     build:
       context: ./todoApp/api/
       dockerfile: Dockerfile
@@ -56,6 +26,23 @@ services:
       - "8000:8000"
     volumes:
       - ./todoApp/api:/app:cached
+    command: "/app/bin/boot.sh"
+    tty: true
+    stdin_open: true
+    depends_on:
+      - mysql
+
+  todo-app:
+    container_name: "webTest_todo-app_1"
+    build:
+      context: ./todoApp/frontend/
+      dockerfile: Dockerfile
+    network_mode: "host"
+    ports:
+      - "3306:3306"
+      - "8000:8000"
+    volumes:
+      - ./todoApp/frontend:/app:cached
     command: "/app/bin/boot.sh"
     tty: true
     stdin_open: true
