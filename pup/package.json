@@ -1,0 +1,26 @@
+{
+  "name": "pup",
+  "version": "0.1",
+  "main": "index.js",
+  "module": "run.js",
+  "license": "MIT",
+  "scripts": {
+    "bare": "node ./cmd/bare.js",
+    "master": "node ./cmd/master.js",
+    "test": "jest --runInBand --bail ./cmd/test.js"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "jest": "^26.0.1",
+    "pixelmatch": "^5.2.0",
+    "pngjs": "^5.0.0",
+    "puppeteer": "^3.0.4"
+  },
+  "comments": {
+    "esm": "import/export for Node",
+    "jest": "test framework",
+    "pixelmatch": "image diff tool",
+    "pngjs": "read/write png images",
+    "puppeteer": "official chrome automation"
+  }
+}
