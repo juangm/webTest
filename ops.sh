@@ -6,28 +6,11 @@ p() {
   printf "%s\n" "$1"
 }
 
-# Setup DB
-setup_db() {
-  docker-compose down
-  # remove data volumes
-  docker volume rm "webTest_mysql-data"
-  # mysql
-  docker-compose up --build -d mysql
-  sleep 5
-  docker exec "webTest_mysql_1" /setup-sync.sh
-  docker-compose stop mysql
-  p "DB setup done."
-}
-
 show_help() {
   p ""
-  p "Denver help."
+  p "Help."
   p "------------"
   p "dependencies: docker, docker-compose, git."
-  p ""
-  p "Setup."
-  p "------"
-  p "./ops setup (setup the db)"
   p ""
   p "Control."
   p "--------"
@@ -56,9 +39,6 @@ show_help() {
 }
 
 case "$1" in
-  setup)
-    setup_db
-    ;;
   up)
     docker-compose up -d
     ;;
