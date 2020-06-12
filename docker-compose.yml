@@ -40,7 +40,7 @@ services:
     network_mode: "host"
     ports:
       - "3306:3306"
-      - "8000:8000"
+      - "8080:8080"
     volumes:
       - ./todoApp/frontend:/app:cached
     command: "/app/bin/boot.sh"
@@ -48,3 +48,12 @@ services:
     stdin_open: true
     depends_on:
       - mysql
+
+  puppeteer:
+    container_name: "webTest_puppeteer_1"
+    build:
+      context: ./pup/
+      dockerfile: Dockerfile
+    network_mode: "host"
+    volumes:
+      - ./pup:/app
