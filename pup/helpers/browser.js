@@ -24,7 +24,7 @@ const listArgs = [
 // Browser for running the test
 export function launchBrowser(slowMotion = 0) {
   return pup.launch({
-    headless: false,
+    headless: true,
     slowMo: slowMotion,
     defaultViewport: {
       width: 1366,
