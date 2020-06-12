@@ -1,4 +1,4 @@
-import pup from "puppeteer";
+import * as pup from "puppeteer";
 // import bucket from "./bucket";
 
 // List with all switches: https://peter.sh/experiments/chromium-command-line-switches/
@@ -24,7 +24,7 @@ const listArgs = [
 // Browser for running the test
 export function launchBrowser(slowMotion = 0) {
   return pup.launch({
-    headless: true,
+    headless: false,
     slowMo: slowMotion,
     defaultViewport: {
       width: 1366,
