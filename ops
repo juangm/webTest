@@ -89,7 +89,7 @@ case "$1" in
     COMPOSE_HTTP_TIMEOUT=300 docker-compose logs -f --tail "${3:-100}" "${2}"
     ;;
   # Interact.
-  app-frontend | app-backend | todo-api | todo-frontend)
+  puppeteer | mysql | todo-api | todo-app)
     case "$2" in
       noroot)
         trap 'p ""; p "${1} is not running. Please run ./ops up first"' ERR
