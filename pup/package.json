@@ -5,22 +5,32 @@
   "module": "run.js",
   "license": "MIT",
   "scripts": {
-    "bare": "node ./cmd/bare.js",
+    "bare": "ts-node ./tests/bare.ts",
     "master": "node ./cmd/master.js",
     "test": "jest --runInBand --bail ./cmd/test.js"
   },
   "dependencies": {
-    "esm": "^3.2.25",
     "jest": "^26.0.1",
     "pixelmatch": "^5.2.0",
     "pngjs": "^5.0.0",
-    "puppeteer": "^3.3.0"
+    "puppeteer": "^3.3.0",
+    "ts-node": "^8.10.2"
   },
   "comments": {
-    "esm": "import/export for Node",
-    "jest": "test framework",
-    "pixelmatch": "image diff tool",
-    "pngjs": "read/write png images",
-    "puppeteer": "official chrome automation"
+    "jest": "Test runner framework",
+    "pixelmatch": "Image diff tool",
+    "pngjs": "Read/write png images",
+    "puppeteer": "Official chrome automation",
+    "ts-node": "TypeScript execution and REPL for node.js"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "@types/puppeteer": "^3.0.0",
+    "typescript": "^3.9.5"
+  },
+  "dev-comments": {
+    "@types/node": "TypeScript definitions for Node.js",
+    "@types/puppeteer": "TypeScript definitions for Puppeteer",
+    "typescript": "Language for application scale JavaScript development"
   }
 }
