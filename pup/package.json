@@ -10,6 +10,7 @@
     "test": "jest --runInBand --bail ./cmd/test.js"
   },
   "dependencies": {
+    "@google-cloud/storage": "^5.1.0",
     "jest": "^26.0.1",
     "pixelmatch": "^5.2.0",
     "pngjs": "^5.0.0",
@@ -17,6 +18,7 @@
     "ts-node": "^8.10.2"
   },
   "comments": {
+    "@google-cloud/storage": "manipulate gcloud storage buckets",
     "jest": "Test runner framework",
     "pixelmatch": "Image diff tool",
     "pngjs": "Read/write png images",
