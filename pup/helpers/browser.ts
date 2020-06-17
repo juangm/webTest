@@ -1,5 +1,5 @@
 import * as pup from "puppeteer";
-// import bucket from "./bucket";
+import bucket from "./bucket";
 
 // List with all switches: https://peter.sh/experiments/chromium-command-line-switches/
 const listArgs = [
@@ -46,7 +46,7 @@ export async function captureFail(browser, path) {
     await page.screenshot({ path: `helpers/img/fails/${date}Page${numPage}.png`, fullPage: true });
     numPage += 1;
   }
-  // Upload images to bucket
+  // Upload images to bucket (enable when configured bucket in gcloud and env file)
   // await bucket.uploadDirectory(`helpers/img/fails/`, `img/fails/${path}`);
 }
 
