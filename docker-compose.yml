@@ -55,5 +55,7 @@ services:
       context: ./pup/
       dockerfile: Dockerfile
     network_mode: "host"
+    env_file:
+      - pup/env
     volumes:
       - ./pup:/app
