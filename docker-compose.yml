@@ -48,14 +48,3 @@ services:
     stdin_open: true
     depends_on:
       - mysql
-
-  puppeteer:
-    container_name: "webTest_puppeteer_1"
-    build:
-      context: ./pup/
-      dockerfile: Dockerfile
-    network_mode: "host"
-    env_file:
-      - pup/env
-    volumes:
-      - ./pup:/app
