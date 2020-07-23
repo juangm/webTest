@@ -3,7 +3,7 @@
 version: "2"
 services:
   mysql:
-    container_name: "webTest_mysql_1"
+    container_name: "mysql_1"
     build:
       context: ./mysql/
       dockerfile: Dockerfile
@@ -16,7 +16,7 @@ services:
     stdin_open: true
 
   todo-api:
-    container_name: "webTest_todo-api_1"
+    container_name: "todo-api_1"
     build:
       context: ./todoApp/api/
       dockerfile: Dockerfile
@@ -33,7 +33,7 @@ services:
       - mysql
 
   todo-app:
-    container_name: "webTest_todo-app_1"
+    container_name: "todo-app_1"
     build:
       context: ./todoApp/frontend/
       dockerfile: Dockerfile
