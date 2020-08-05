@@ -5,16 +5,21 @@
   "module": "run.js",
   "license": "MIT",
   "scripts": {
-    "bare:pup": "ts-node ./tests/puppeteer.ts"
+    "bare:pup": "ts-node ./tests/puppeteer.ts",
+    "cy:electron": "cypress run --spec './cypress/integration/todoApp.ts'",
+    "cy:chrome": "cypress run --spec './cypress/integration/todoApp.ts' --browser chrome"
   },
   "dependencies": {
+    "@bahmutov/add-typescript-to-cypress": "^2.1.2",
     "@google-cloud/storage": "^5.1.0",
-    "cypress": "^4.9.0",
+    "cypress": "^4.12.0",
     "jest": "^26.0.1",
     "pixelmatch": "^5.2.0",
     "pngjs": "^5.0.0",
     "puppeteer": "^3.3.0",
-    "ts-node": "^8.10.2"
+    "ts-loader": "^8.0.2",
+    "ts-node": "^8.10.2",
+    "webpack": "^4.44.1"
   },
   "comments": {
     "@google-cloud/storage": "manipulate gcloud storage buckets",
