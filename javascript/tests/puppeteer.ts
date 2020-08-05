@@ -6,7 +6,7 @@ const run = async () => {
   // Open page
   const page = await browser.newPage();
   await page.setViewport({ width: 1024, height: 768 });
-  await page.goto("http://localhost:8080/index.html");
+  await page.goto("http://localhost:5000/index.html");
 
   browser.close();
 };
