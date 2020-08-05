@@ -9,7 +9,6 @@ services:
       dockerfile: Dockerfile
     env_file:
       - mysql/env.dev
-    network_mode: "host"
     ports:
       - "3306:3306"
     tty: true
@@ -20,7 +19,6 @@ services:
     build:
       context: todoApp/api/
       dockerfile: Dockerfile
-    network_mode: "host"
     ports:
       - "8000:8000"
     volumes:
@@ -36,9 +34,8 @@ services:
     build:
       context: todoApp/frontend/
       dockerfile: Dockerfile
-    network_mode: "host"
     ports:
-      - "127.0.0.1:5000:5000"
+      - "5000:5000"
     volumes:
       - ./todoApp/frontend:/app:cached
     command: "/app/bin/boot.sh"

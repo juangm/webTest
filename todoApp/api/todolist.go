@@ -14,7 +14,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-var db, _ = gorm.Open("mysql", "root:root@/todolist?charset=utf8&parseTime=True&loc=Local")
+var db, _ = gorm.Open("mysql", "root:root@(host.docker.internal:3306)/todolist?charset=utf8&parseTime=True")
 
 type TodoItemModel struct {
 	Id          int `gorm:"primary_key"`
