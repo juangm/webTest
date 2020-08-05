@@ -1,5 +1,4 @@
 import * as pup from "puppeteer";
-import bucket from "./bucket";
 
 // List with all switches: https://peter.sh/experiments/chromium-command-line-switches/
 const listArgs = [

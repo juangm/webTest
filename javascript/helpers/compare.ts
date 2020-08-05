@@ -1,7 +1,6 @@
 import * as fs from "fs";
 import { PNG } from "pngjs";
 import pixelmatch from "pixelmatch";
-import bucket from "./bucket";
 
 export const compare = {
   config: {

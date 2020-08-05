@@ -7,7 +7,8 @@
   "scripts": {
     "bare:pup": "ts-node ./tests/puppeteer.ts",
     "cy:electron": "cypress run --spec './cypress/integration/todoApp.ts'",
-    "cy:chrome": "cypress run --spec './cypress/integration/todoApp.ts' --browser chrome"
+    "cy:chrome": "cypress run --spec './cypress/integration/todoApp.ts' --browser chrome",
+    "play": "ts-node ./tests/playwright.ts"
   },
   "dependencies": {
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
@@ -15,6 +16,7 @@
     "cypress": "^4.12.0",
     "jest": "^26.0.1",
     "pixelmatch": "^5.2.0",
+    "playwright": "^1.2.1",
     "pngjs": "^5.0.0",
     "puppeteer": "^3.3.0",
     "ts-loader": "^8.0.2",
