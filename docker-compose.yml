@@ -5,7 +5,7 @@ services:
   mysql:
     container_name: "mysql_1"
     build:
-      context: ./mysql/
+      context: mysql/
       dockerfile: Dockerfile
     env_file:
       - mysql/env.dev
@@ -18,11 +18,10 @@ services:
   todo-api:
     container_name: "todo-api_1"
     build:
-      context: ./todoApp/api/
+      context: todoApp/api/
       dockerfile: Dockerfile
     network_mode: "host"
     ports:
-      - "3306:3306"
       - "8000:8000"
     volumes:
       - ./todoApp/api:/app:cached
@@ -35,12 +34,11 @@ services:
   todo-app:
     container_name: "todo-app_1"
     build:
-      context: ./todoApp/frontend/
+      context: todoApp/frontend/
       dockerfile: Dockerfile
     network_mode: "host"
     ports:
-      - "3306:3306"
-      - "8080:8080"
+      - "127.0.0.1:5000:5000"
     volumes:
       - ./todoApp/frontend:/app:cached
     command: "/app/bin/boot.sh"
