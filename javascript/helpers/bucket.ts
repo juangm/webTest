@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as Storage from "@google-cloud/storage";
+import * as fs from 'fs';
+import * as Storage from '@google-cloud/storage';
 
 const connectToBucket = async () => {
   const storage = new Storage.Storage(bucket.configStorage);
@@ -17,7 +17,7 @@ export const bucket = {
     // Full list of options: https://googleapis.dev/nodejs/storage/latest/global.html#UploadOptions
     const optionsUpload = {
       destination: destinationPath,
-      validation: "crc32c",
+      validation: 'crc32c',
     };
     try {
       await bucket.upload(filePath, optionsUpload);
@@ -53,7 +53,7 @@ export const bucket = {
     try {
       const [listFiles] = await bucket.getFiles({ directory: srcPath });
       for (let file of listFiles) {
-        const fileName = file.name.split("/").pop();
+        const fileName = file.name.split('/').pop();
         console.log(`Downloading file ${fileName}`);
         await file.download({ destination: `${destPath}/${fileName}` });
       }
