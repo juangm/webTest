@@ -2,7 +2,7 @@
 
 ## Description
 
-- Small project checking different automation frameworks for E2E testing. 
+- Small project checking different automation frameworks for E2E testing.
 - Tests are going to be performed against a TODO web application.
 - Frameworks are separated by languages: javascript, python, ...
 
@@ -26,17 +26,30 @@
 ### Starting the APP
 
 Build (if you didn't build before) and start the services:
+
 - `docker-compose up -d`
 
 Wait for mysql start and set the DB (it takes a few seconds) and start again the API service:
+
 - `docker-compose start todo-api`
 
 Check all the services are working properly:
+
 - `docker-compose ps`
 
 ## Javascript E2E frameworks
 
-### :construction: In progress....
+### Puppeteer
+
+#### :construction: In progress....
+
+### Cypress
+
+#### :construction: In progress....
+
+### PlayWright
+
+#### :construction: In progress....
 
 ## :snake: Python E2E frameworks
 
