@@ -5,6 +5,20 @@
 - Small project checking different automation frameworks for E2E testing.
 - Tests are going to be performed against a TODO web application.
 - Frameworks are separated by languages: javascript, python, ...
+- Each framework will be used to test one simple test scenario for E2E
+
+### Test Scenario
+
+- Test scenario to automate in all the test frameworks
+- Goal: check the basic functionality of the APP in one test case
+
+#### Steps:
+
+1. Created two items in the TODO app (`create repo` and `push first commit`)
+2. Completed item `create repo` and check it is set as completed
+3. Rename item `push first commit` to `add README`
+4. Complete item `add README`
+5. Delete item `create repo` and `add README`
 
 ## :warning: Security Warning
 
