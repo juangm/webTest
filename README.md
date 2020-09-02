@@ -16,9 +16,8 @@
 
 1. Created two items in the TODO app (`create repo` and `push first commit`)
 2. Completed item `create repo` and check it is set as completed
-3. Rename item `push first commit` to `add README`
-4. Complete item `add README`
-5. Delete item `create repo` and `add README`
+3. Delete incomplete item `push first commit`
+4. Delete completed item `create repo`
 
 ## :warning: Security Warning
 
