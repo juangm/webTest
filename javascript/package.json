@@ -13,7 +13,8 @@
   "dependencies": {
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
     "@google-cloud/storage": "^5.1.0",
-    "cypress": "^4.12.0",
+    "cypress": "^5.1.0",
+    "cypress-xpath": "^1.6.0",
     "jest": "^26.0.1",
     "pixelmatch": "^5.2.0",
     "playwright": "^1.2.1",
@@ -24,11 +25,13 @@
     "webpack": "^4.44.1"
   },
   "comments": {
-    "@google-cloud/storage": "manipulate gcloud storage buckets",
-    "jest": "Test runner framework",
-    "pixelmatch": "Image diff tool",
-    "pngjs": "Read/write png images",
-    "puppeteer": "Official chrome automation",
+    "@google-cloud/storage": "manipulate gcloud storage buckets.",
+    "cypress": "Fast, easy and reliable testing for anything that runs in a browser.",
+    "cypress-xpath": "Add xpath selector support to cypress.",
+    "jest": "Test runner framework.",
+    "pixelmatch": "Image diff tool.",
+    "pngjs": "Read/write png images.",
+    "puppeteer": "Official chrome automation.",
     "ts-node": "TypeScript execution and REPL for node.js"
   },
   "devDependencies": {
@@ -38,7 +41,7 @@
   },
   "dev-comments": {
     "@types/node": "TypeScript definitions for Node.js",
-    "@types/puppeteer": "TypeScript definitions for Puppeteer",
-    "typescript": "Language for application scale JavaScript development"
+    "@types/puppeteer": "TypeScript definitions for Puppeteer.",
+    "typescript": "Language for application scale JavaScript development."
   }
 }
