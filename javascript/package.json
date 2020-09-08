@@ -6,9 +6,11 @@
   "license": "MIT",
   "scripts": {
     "bare:pup": "ts-node ./tests/puppeteer.ts",
+    "jest:pup": "jest --runInBand ./tests/puppeteer.jest.ts",
     "cy:electron": "cypress run --spec './cypress/integration/todoApp.ts'",
     "cy:chrome": "cypress run --spec './cypress/integration/todoApp.ts' --browser chrome",
-    "play": "ts-node ./tests/playwright.ts"
+    "bare:play": "ts-node ./tests/playwright.ts",
+    "jest:play": "jest --runInBand ./tests/playwright.jest.ts"
   },
   "dependencies": {
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
@@ -20,6 +22,7 @@
     "playwright": "^1.2.1",
     "pngjs": "^5.0.0",
     "puppeteer": "^3.3.0",
+    "ts-jest": "^26.3.0",
     "ts-loader": "^8.0.2",
     "ts-node": "^8.10.2",
     "webpack": "^4.44.1"
@@ -35,12 +38,14 @@
     "ts-node": "TypeScript execution and REPL for node.js"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.13",
     "@types/node": "^14.0.13",
     "@types/puppeteer": "^3.0.0",
     "typescript": "^3.9.5"
   },
   "dev-comments": {
     "@types/node": "TypeScript definitions for Node.js",
+    "@types/jest": "TypeScript definitions for Jest",
     "@types/puppeteer": "TypeScript definitions for Puppeteer.",
     "typescript": "Language for application scale JavaScript development."
   }

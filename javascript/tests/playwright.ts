@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 
-const run = async () => {
+export const playwrightRun = async () => {
   const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
   await page.goto('http://localhost:5000/index.html');
@@ -27,4 +27,4 @@ const run = async () => {
   await browser.close();
 };
 
-run();
+playwrightRun();

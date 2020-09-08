@@ -1,6 +1,6 @@
-import { launchBrowser, sleep } from '../helpers/browser';
+import { launchBrowser } from '../helpers/browser';
 
-const run = async () => {
+export const puppeteerRun = async () => {
   // Set up Puppeteer and Chrome
   const browser = await launchBrowser();
   // Open page
@@ -30,4 +30,4 @@ const run = async () => {
   browser.close();
 };
 
-run();
+puppeteerRun();
