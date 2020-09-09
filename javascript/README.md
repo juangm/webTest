@@ -14,10 +14,36 @@
 - NodeJS
 - Run in the working directory `yarn install`
 
-## Puppeteer
+## Frameworks to compare
+
+### Puppeteer
+
+#### Puppeteer without any test runner
 
 - Run puppeteer test: `yarn bare:pup`
 
-## Playwright
+#### Puppeteer with JEST as test runner
 
-- Run playwright test: `yarn play`
+- Run puppeteer test: `yarn jest:pup`
+
+### Playwright
+
+#### Playwright without any test runner
+
+- Run playwright test: `yarn bare:play`
+
+#### Playwright with JEST as test runner
+
+- Run playwright test: `yarn jest:play`
+
+### Cypress
+
+#### Running from cypress GUI
+
+- Start cypress `yarn cypress open`
+- Run the test from the GUI
+
+#### Cypress from CLI
+
+- Run test case with electron `yarn cy:electron`
+- Run test case with chrome `yarn cy:chrome`
