@@ -52,17 +52,12 @@ Check all the services are working properly:
 
 ## Javascript E2E frameworks
 
-### Puppeteer
-
-#### :construction: In progress....
-
-### Cypress
-
-#### :construction: In progress....
-
-### PlayWright
-
-#### :construction: In progress....
+- POC to check different javascript frameworks for E2E testing.
+- List of frameworks to check/implement:
+  - puppeteer
+  - playwright
+  - cypress
+- More information in -> [javascript README](javascript/README.md)
 
 ## :snake: Python E2E frameworks
 
