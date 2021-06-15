@@ -62,7 +62,3 @@ Check all the services are working properly:
 ## :snake: Python E2E frameworks
 
 ### :construction: In progress....
-
-## :diamonds: Ruby E2E frameworks
-
-### :construction: In progress....
