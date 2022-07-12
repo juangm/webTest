@@ -7,25 +7,24 @@
   "scripts": {
     "bare:pup": "ts-node ./tests/puppeteer.ts",
     "jest:pup": "jest --runInBand ./tests/puppeteer.jest.ts",
-    "cy:electron": "cypress run --spec './cypress/integration/todoApp.ts'",
-    "cy:chrome": "cypress run --spec './cypress/integration/todoApp.ts' --browser chrome",
+    "cy:electron": "cypress run --spec './cypress/e2e/todoApp.ts'",
+    "cy:chrome": "cypress run --spec './cypress/e2e/todoApp.ts' --browser chrome",
     "bare:play": "ts-node ./tests/playwright.ts",
     "jest:play": "jest --runInBand ./tests/playwright.jest.ts"
   },
   "dependencies": {
-    "@bahmutov/add-typescript-to-cypress": "^2.1.2",
-    "@google-cloud/storage": "^5.1.0",
-    "cypress": "^5.1.0",
-    "cypress-xpath": "^1.6.0",
-    "jest": "^26.0.1",
-    "pixelmatch": "^5.2.0",
-    "playwright": "^1.2.1",
-    "pngjs": "^5.0.0",
-    "puppeteer": "^3.3.0",
-    "ts-jest": "^26.3.0",
-    "ts-loader": "^8.0.2",
-    "ts-node": "^8.10.2",
-    "webpack": "^4.44.1"
+    "@google-cloud/storage": "^6.2.2",
+    "cypress": "^10.3.0",
+    "cypress-xpath": "^2.0.0",
+    "jest": "^28.1.2",
+    "pixelmatch": "^5.3.0",
+    "playwright": "^1.23.2",
+    "pngjs": "^6.0.0",
+    "puppeteer": "^15.3.2",
+    "ts-jest": "^28.0.5",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.2",
+    "webpack": "^5.73.0"
   },
   "comments": {
     "@google-cloud/storage": "manipulate gcloud storage buckets.",
@@ -38,11 +37,11 @@
     "ts-node": "TypeScript execution and REPL for node.js"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.13",
-    "@types/node": "^14.0.13",
-    "@types/puppeteer": "^3.0.0",
-    "prettier": "^2.1.1",
-    "typescript": "^3.9.5"
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.3",
+    "@types/puppeteer": "^5.4.6",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   },
   "dev-comments": {
     "@types/node": "TypeScript definitions for Node.js",
